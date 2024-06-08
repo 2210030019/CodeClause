@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+  <header class="header">
+    <h1 id="header_name">Event Countdown</h1>
+  </header>
+
+  <main class="main">
+    <div class="event">
+      <h2>Upcoming Event: <span id="event_name"></span></h2>
+      <p>Enter event name:</p>
+      <input type="text" id="event_input" placeholder="Enter event name">
+      <p>Choose the date:</p>
+      <form class="form" id="countdownForm">
+        <input autocomplete="off" autofocus class="input__time" id="input__time" type="date">
+        <button class="submit" type="submit">Start Countdown</button>
+      </form>
+    </div>
+
+    <div class="until" id="myCountdown">
+      <div class="until__component">
+        <div class="until__numeric until__numeric--days">00</div>
+        <div class="until__unit">Days</div>
+      </div>
+
+      <div class="until__component">
+        <div class="until__numeric until__numeric--hours">00</div>
+        <div class="until__unit">Hours</div>
+      </div>
+
+      <div class="until__component">
+        <div class="until__numeric until__numeric--minutes">00</div>
+        <div class="until__unit">Minutes</div>
+      </div>
+
+      <div class="until__component">
+        <div class="until__numeric until__numeric--seconds">00</div>
+        <div class="until__unit">Seconds</div>
+      </div>
+
+      <div class="until__event">DD-MM-YYYY Remaining<div><span id="event_name"></span>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.1/dayjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.1/plugin/duration.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const eventInput = document.getElementById('event_input');
+    const eventName = document.getElementById('event_name');
+    eventInput.addEventListener('input', () => {
+      eventName.textContent = eventInput.value || 'Event Name';
+    });
+  </script>
+</body>
+</html>

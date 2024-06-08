@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0 1rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  input {
+    text-align: center;
+    font-family: inherit;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .main {
+    text-align: center;
+  }
+  
+  .submit {
+    padding: 10px;
+    text-align: center;
+    background: lightblue;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .until__component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .until__numeric {
+    margin-right: 10px;
+  }
+  
+  .until__unit {
+    margin-left: 10px;
+  }
+  
+  .until__event {
+    margin-top: 20px;
+  }
